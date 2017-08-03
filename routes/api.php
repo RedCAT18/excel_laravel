@@ -15,6 +15,6 @@ use Illuminate\Http\Request;
 
 Route::middleware('auth:api')->post('/user', 'UserController@index');
 
-
+Route::get('/menu', 'ExcelController@loadMenu');
 Route::post('/excel', 'ExcelController@loadExcel');
 Route::get('/users', 'ExcelController@loadUser');

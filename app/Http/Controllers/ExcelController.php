@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use  Maatwebsite\Excel\Facades\Excel;
 use App\User;
+use App\Menu;
 
 class ExcelController extends Controller
 {
@@ -75,5 +76,10 @@ class ExcelController extends Controller
 
         return $user;
 
+    }
+
+    public function loadMenu(Request $request){
+        $menu = Menu::all();
+        return $menu;
     }
 }
